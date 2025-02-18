@@ -3,12 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
 
     function showNextService() {
-        services.forEach((service, i) => {
-            service.classList.remove("active");
-        });
-
+        services.forEach((service) => service.classList.remove("active"));
         services[index].classList.add("active");
-
         index = (index + 1) % services.length; // Loop infinitely
     }
 
