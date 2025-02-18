@@ -1,4 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+    });
+
+    // Service Animation
     const services = document.querySelectorAll(".service");
     let index = 0;
 
@@ -10,10 +19,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        index = (index + 1) % services.length; // Loop back after the last one
+        index = (index + 1) % services.length;
     }
 
-    showNextService(); // Show the first service
-    setInterval(showNextService, 3000); // Change service every 3 seconds
+    showNextService();
+    setInterval(showNextService, 3000);
 });
+
 
