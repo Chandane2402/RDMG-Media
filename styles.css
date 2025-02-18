@@ -1,22 +1,20 @@
+/* Styles for mobile view */
 @media (max-width: 768px) {
     .service-container {
-        position: relative;
-        width: 100%;
-        height: 50px; /* Ensures only one service is shown at a time */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
         overflow: hidden;
+        position: relative;
     }
 
     .service {
         position: absolute;
-        top: 0;
-        left: 0; /* Ensures all services are aligned left */
-        width: 100%;
         opacity: 0;
-        transition: opacity 1s ease-in-out;
+        transition: opacity 0.5s ease-in-out;
         font-size: 18px;
         font-weight: bold;
-        text-align: left;
-        padding-left: 10px; /* Ensures text stays readable */
     }
 
     .service.active {
