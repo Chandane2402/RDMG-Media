@@ -16,3 +16,4 @@ document.addEventListener("DOMContentLoaded", function () {
     showNextService(); // Show the first service
     setInterval(showNextService, 3000); // Change service every 3 seconds
 });
+
