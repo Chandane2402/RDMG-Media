@@ -115,3 +115,26 @@ footer {
     color: white;
     font-size: 14px;
 }
+/* Styles for mobile view */
+@media (max-width: 768px) {
+    .service-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .service {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .service.active {
+        opacity: 1;
+    }
+}
