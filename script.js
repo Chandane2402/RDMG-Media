@@ -5,12 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function showNextService() {
         services.forEach((service, i) => {
             service.classList.remove("active");
-            if (i === index) {
-                service.classList.add("active");
-            }
         });
 
-        index = (index + 1) % services.length; // Loop back after the last one
+        services[index].classList.add("active");
+
+        index = (index + 1) % services.length; // Loop infinitely
     }
 
     showNextService(); // Show the first service
